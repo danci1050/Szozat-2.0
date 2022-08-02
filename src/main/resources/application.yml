@@ -4,6 +4,9 @@ server:
     include-binding-errors: always
 
 spring:
+  devtools:
+    restart:
+      additional-paths: src/main/resources/public
   datasource:
     initialize: false
     password: password
