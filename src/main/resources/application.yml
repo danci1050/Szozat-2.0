@@ -1,0 +1,21 @@
+server:
+  error:
+    include-message: always
+    include-binding-errors: always
+
+spring:
+  datasource:
+    initialize: false
+    password: postgres
+    url: jdbc:postgresql://localhost:49153/szozat
+    username: postgres
+  jpa:
+    hibernate:
+    properties:
+      hibernate:
+        ddl-auto: create-drop
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        show-sql: true
+        format_sql: true
+    show-sql: true
+    generate-ddl: true
