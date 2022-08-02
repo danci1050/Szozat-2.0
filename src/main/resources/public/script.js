@@ -105,6 +105,9 @@ var diff = now - start;
 var oneDay = 1000 * 60 * 60 * 24;
 var day = Math.floor(diff / oneDay);
 document.querySelector("#menutitle").innerHTML = "Szózat 2.0 - "+day+". nap"
+// ----------------
+// window onload
+// ----------------
 window.addEventListener("load", function () {
    
 
@@ -128,7 +131,8 @@ window.addEventListener("load", function () {
     }
     forgas = false
     const timer = ms => new Promise(res => setTimeout(res, ms))
-    async function szinez(sz1,sz2,sz3,sz4,sz5) {
+
+async function szinez(sz1,sz2,sz3,sz4,sz5) {
         let hanyadik = (hanyadiksor - 1) * 5 + 1;
         let szinek = [sz1,sz2,sz3,sz4,sz5]
         forgas = true
@@ -150,14 +154,22 @@ window.addEventListener("load", function () {
             await timer(375);
         }
         forgas = false
+        checkwin(sz1,sz2,sz3,sz4,sz5)
         hanyadiksor++
         hanyadikbetu = 1
     }
+    function checkwin(a1,a2,a3,a4,a5) {
+        if (a1 == "correct" && a2 == "correct" && a3 == "correct" && a4 == "correct" && a5 == "correct") {
+            console.log("Nyertél geci")
+        }
+    }
+
     async function doo(mit) {
         if (mit == "do") {
             if(document.querySelectorAll(".letter")[(hanyadiksor * 5) - 1] != null && !forgas){
             var response = await checkWord(getszo().toLowerCase())
-            szinez(response[0],response[1],response[2],response[3],response[4])}
+            szinez(response[0],response[1],response[2],response[3],response[4])
+            }
         }
         else {
             let kockak = document.querySelectorAll(".letterbox")
