@@ -31,29 +31,42 @@ function betolt(mit) {
             cim.innerHTML = "Szabályok"
             content.innerHTML = `
             <p class="contentp">Találd ki a napi szót 8 tippből! Minden tipp után a négyzetek színe jelzi, hogy mennyire kerültél közel a megoldáshoz.</p>
-            <div class="guessescenter">
-            <div class="guesses2">
+        <div class="guessescenter">
+        <div class="guesses2">
             <div class="row">
-            <div class="letterboxyellow">
-            <div class="letterbox">
-        <div class="letter">H</div>
+            <div class="letterboxgreen"><div class="letterbox"><div class="letter">H</div></div></div>
+            <div class="letterboxcontainer whiteborder"><div class="letterbox"><div class="letter">I</div></div></div>
+            <div class="letterboxcontainer whiteborder"><div class="letterbox"><div class="letter">T</div></div></div>
+            <div class="letterboxcontainer whiteborder"><div class="letterbox"><div class="letter">E</div></div></div>
+            <div class="letterboxcontainer whiteborder"><div class="letterbox"><div class="letter">L</div></div></div>
+            </div>
         </div>
         </div>
-        <div class="letterboxcontainer whiteborder">
-            <div class="letterbox"><div class="letter">I</div></div>
-        </div>
-        <div class="letterboxcontainer whiteborder">
-            <div class="letterbox"><div class="letter">T</div></div>
-        </div>
-        <div class="letterboxcontainer whiteborder">
-            <div class="letterbox"><div class="letter">E</div></div>
-        </div>
-        <div class="letterboxcontainer whiteborder">
-            <div class="letterbox"><div class="letter">L</div></div>
-        </div>
+        <p class="contentp">A "H" betű szerepel a szóban és jó helyen van.</p>
+        <div class="guessescenter">
+        <div class="guesses2">
+            <div class="row">
+            <div class="letterboxcontainer whiteborder"><div class="letterbox"><div class="letter">Sz</div></div></div>
+            <div class="letterboxcontainer whiteborder"><div class="letterbox"><div class="letter">Ó</div></div></div>
+            <div class="letterboxcontainer whiteborder"><div class="letterbox"><div class="letter">Z</div></div></div>
+            <div class="letterboxyellow"><div class="letterbox"><div class="letter">A</div></div></div>
+            <div class="letterboxcontainer whiteborder"><div class="letterbox"><div class="letter">T</div></div></div>
+            </div> 
         </div>
         </div>
+        <p class="contentp">Az "A" betű szerepel a szóban, de nem jó helyen van.</p>
+        <div class="guessescenter">
+        <div class="guesses2">
+            <div class="row">
+            <div class="letterboxcontainer whiteborder"><div class="letterbox"><div class="letter">J</div></div></div>
+            <div class="letterboxgrey"><div class="letterbox"><div class="letter">Á</div></div></div>
+            <div class="letterboxcontainer whiteborder"><div class="letterbox"><div class="letter">T</div></div></div>
+            <div class="letterboxcontainer whiteborder"><div class="letterbox"><div class="letter">É</div></div></div>
+            <div class="letterboxcontainer whiteborder"><div class="letterbox"><div class="letter">K</div></div></div>
+            </div>
         </div>
+        </div>
+        <p class="contentp">Az "Á" betű nem szerepel a szóban.</p>
         `;
             break;
         case "settings":
@@ -68,13 +81,13 @@ function betolt(mit) {
     }
 }
 function flipto(which, colour) {
-    let speed = 350;
+    let speed = 175;
     let allbox = document.querySelectorAll(".letterbox")
     let now = allbox[which - 1];
     now.parentElement.classList.remove("letterboxyellow")
     now.parentElement.classList.remove("letterboxgreen")
     now.parentElement.classList.remove("letterboxgrey")
-    now.parentElement.style.transitionDuration = speed + "ms";
+    now.parentElement.style.transition = speed + "ms";
     now.parentElement.classList.add("flip")
     setTimeout(function () {
         now.parentElement.style.transitionDuration = "10ms";
@@ -84,7 +97,7 @@ function flipto(which, colour) {
             now.parentElement.classList.remove("letterboxcontainer")
             now.parentElement.classList.remove("flip");
         }, speed)
-    }, speed)
+    }, speed-100)
 }
 var now = new Date();
 var start = new Date(now.getFullYear(), 0, 0);
@@ -113,10 +126,38 @@ window.addEventListener("load", function () {
         }
         return szo;
     }
-
-    function doo(mit) {
+    forgas = false
+    const timer = ms => new Promise(res => setTimeout(res, ms))
+    async function szinez(sz1,sz2,sz3,sz4,sz5) {
+        let hanyadik = (hanyadiksor - 1) * 5 + 1;
+        let szinek = [sz1,sz2,sz3,sz4,sz5]
+        forgas = true
+        for(let i = 0;i<5;i++){
+            
+            switch (szinek[i]) { 
+                case "correct":
+                    flipto(hanyadik, "green")
+                    break;
+                case "close":
+                    flipto(hanyadik, "yellow")
+                    break;
+                case "wrong":
+                    flipto(hanyadik, "grey")
+                    break;
+                default:
+            }
+            hanyadik++
+            await timer(375);
+        }
+        forgas = false
+        hanyadiksor++
+        hanyadikbetu = 1
+    }
+    async function doo(mit) {
         if (mit == "do") {
-            console.log(getszo())
+            if(document.querySelectorAll(".letter")[(hanyadiksor * 5) - 1] != null && !forgas){
+            var response = await checkWord(getszo().toLowerCase())
+            szinez(response[0],response[1],response[2],response[3],response[4])}
         }
         else {
             let kockak = document.querySelectorAll(".letterbox")
@@ -304,3 +345,18 @@ window.addEventListener("load", function () {
             }
         });
 });
+
+ async function checkWord(word){
+    const url = 'http://localhost:8080/api/v1/szozat/'
+    const response = fetch(url, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'plain/text',
+        },
+        body: word
+    }).then(response => response.json())
+    .then(data => {
+        return data
+    });
+    return response;
+}

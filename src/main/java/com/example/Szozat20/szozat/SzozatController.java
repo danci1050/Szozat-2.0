@@ -12,8 +12,9 @@ public class SzozatController {
 
 
 
-    @GetMapping("/{guess}")
-    public ResponseEntity<String[]> matchLetters(@PathVariable(value = "guess") String guess) {
+    @PostMapping
+    public ResponseEntity<String[]> matchLetters(@RequestBody String guess) {
+        System.out.println(guess);
         ArrayList<String> wordOfTheDay = Szozat.wordToList(Szozat.getWordOfTheDay());
         ArrayList<String> guessedLetters = Szozat.wordToList(guess);
         String[] result = new String[5];
