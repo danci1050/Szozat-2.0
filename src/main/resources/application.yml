@@ -6,8 +6,8 @@ server:
 spring:
   datasource:
     initialize: false
-    password: postgres
-    url: jdbc:postgresql://localhost:49153/szozat
+    password: password
+    url: jdbc:postgresql://ec2-3-110-197-20.ap-south-1.compute.amazonaws.com:5432/szozat
     username: postgres
   jpa:
     hibernate:
