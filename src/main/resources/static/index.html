@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Szózat 2.0</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<noscript>Be kell kapcsolni a JavaScriptet az applikáció futtatásához.</noscript>
+<div class="container">
+    <div class="menu">
+        <div class="title" id="menutitle"></div>
+        <div class="icons">
+            <div class="icon" onclick="fadee('250');betolt('info');"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true" class="h-6 w-6 mr-2 cursor-pointer dark:stroke-white">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg></div>
+            <div class="icon" onclick="fadee('250');betolt('stats');"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true" class="h-6 w-6 mr-2 cursor-pointer dark:stroke-white">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z">
+                </path>
+            </svg></div>
+            <svg  class="icon user" onclick="fadee('250');betolt('login');" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M224 256c70.7 0 128-57.31 128-128s-57.3-128-128-128C153.3 0 96 57.31 96 128S153.3 256 224 256zM274.7 304H173.3C77.61 304 0 381.6 0 477.3c0 19.14 15.52 34.67 34.66 34.67h378.7C432.5 512 448 496.5 448 477.3C448 381.6 370.4 304 274.7 304z"/></svg>
+            <div class="icon" onclick="fadee('250');betolt('settings');"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true" class="h-6 w-6 cursor-pointer dark:stroke-white">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z">
+                </path>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+            </svg></div>
+        </div>
+
+    </div>
+    <div class="guessescenter">
+        <div class="guesses">
+            <div class="row">
+                <div class="letterboxcontainer"><div class="letterbox"></div></div>
+                <div class="letterboxcontainer"><div class="letterbox"></div></div>
+                <div class="letterboxcontainer"><div class="letterbox"></div></div>
+                <div class="letterboxcontainer"><div class="letterbox"></div></div>
+                <div class="letterboxcontainer"><div class="letterbox"></div></div>
+            </div>
+            <div class="row">
+                <div class="letterboxcontainer">
+                    <div class="letterbox"></div>
+                </div>
+                <div class="letterboxcontainer">
+                    <div class="letterbox"></div>
+                </div>
+                <div class="letterboxcontainer">
+                    <div class="letterbox"></div>
+                </div>
+                <div class="letterboxcontainer">
+                    <div class="letterbox"></div>
+                </div>
+                <div class="letterboxcontainer">
+                    <div class="letterbox"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="letterboxcontainer">
+                    <div class="letterbox"></div>
+                </div>
+                <div class="letterboxcontainer">
+                    <div class="letterbox"></div>
+                </div>
+                <div class="letterboxcontainer">
+                    <div class="letterbox"></div>
+                </div>
+                <div class="letterboxcontainer">
+                    <div class="letterbox"></div>
+                </div>
+                <div class="letterboxcontainer">
+                    <div class="letterbox"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="letterboxcontainer">
+                    <div class="letterbox"></div>
+                </div>
+                <div class="letterboxcontainer">
+                    <div class="letterbox"></div>
+                </div>
+                <div class="letterboxcontainer">
+                    <div class="letterbox"></div>
+                </div>
+                <div class="letterboxcontainer">
+                    <div class="letterbox"></div>
+                </div>
+                <div class="letterboxcontainer">
+                    <div class="letterbox"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="letterboxcontainer">
+                    <div class="letterbox"></div>
+                </div>
+                <div class="letterboxcontainer">
+                    <div class="letterbox"></div>
+                </div>
+                <div class="letterboxcontainer">
+                    <div class="letterbox"></div>
+                </div>
+                <div class="letterboxcontainer">
+                    <div class="letterbox"></div>
+                </div>
+                <div class="letterboxcontainer">
+                    <div class="letterbox"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="letterboxcontainer">
+                    <div class="letterbox"></div>
+                </div>
+                <div class="letterboxcontainer">
+                    <div class="letterbox"></div>
+                </div>
+                <div class="letterboxcontainer">
+                    <div class="letterbox"></div>
+                </div>
+                <div class="letterboxcontainer">
+                    <div class="letterbox"></div>
+                </div>
+                <div class="letterboxcontainer">
+                    <div class="letterbox"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="letterboxcontainer">
+                    <div class="letterbox"></div>
+                </div>
+                <div class="letterboxcontainer">
+                    <div class="letterbox"></div>
+                </div>
+                <div class="letterboxcontainer">
+                    <div class="letterbox"></div>
+                </div>
+                <div class="letterboxcontainer">
+                    <div class="letterbox"></div>
+                </div>
+                <div class="letterboxcontainer">
+                    <div class="letterbox"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="letterboxcontainer">
+                    <div class="letterbox"></div>
+                </div>
+                <div class="letterboxcontainer">
+                    <div class="letterbox"></div>
+                </div>
+                <div class="letterboxcontainer">
+                    <div class="letterbox"></div>
+                </div>
+                <div class="letterboxcontainer">
+                    <div class="letterbox"></div>
+                </div>
+                <div class="letterboxcontainer">
+                    <div class="letterbox"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="btnbox">
+        <div class="btnrow">
+            <div class="normalbtn"><p>CS</p></div>
+            <div class="normalbtn"><p>DZ</p></div>
+            <div class="normalbtn"><p>DZS</p></div>
+            <div class="normalbtn"><p>GY</p></div>
+            <div class="normalbtn"><p>LY</p></div>
+            <div class="normalbtn"><p>NY</p></div>
+            <div class="normalbtn"><p>SZ</p></div>
+            <div class="normalbtn"><p>TY</p></div>
+            <div class="normalbtn"><p>ZS</p></div>
+            <div class="normalbtn"><p>Ö</p></div>
+            <div class="normalbtn"><p>Ü</p></div>
+            <div class="normalbtn"><p>Ó</p></div>
+
+        </div>
+        <div class="btnrow">
+            <div class="normalbtn"><p>Q</p></div>
+            <div class="normalbtn"><p>W</p></div>
+            <div class="normalbtn"><p>E</p></div>
+            <div class="normalbtn"><p>R</p></div>
+            <div class="normalbtn"><p>T</p></div>
+            <div class="normalbtn"><p>Z</p></div>
+            <div class="normalbtn"><p>U</p></div>
+            <div class="normalbtn"><p>I</p></div>
+            <div class="normalbtn"><p>O</p></div>
+            <div class="normalbtn"><p>P</p></div>
+            <div class="normalbtn"><p>Ő</p></div>
+            <div class="normalbtn"><p>Ú</p></div>
+        </div>
+        <div class="btnrow">
+            <div class="normalbtn"><p>A</p></div>
+            <div class="normalbtn"><p>S</p></div>
+            <div class="normalbtn"><p>D</p></div>
+            <div class="normalbtn"><p>F</p></div>
+            <div class="normalbtn"><p>G</p></div>
+            <div class="normalbtn"><p>H</p></div>
+            <div class="normalbtn"><p>J</p></div>
+            <div class="normalbtn"><p>K</p></div>
+            <div class="normalbtn"><p>L</p></div>
+            <div class="normalbtn"><p>É</p></div>
+            <div class="normalbtn"><p>Á</p></div>
+            <div class="normalbtn"><p>Ű</p></div>
+        </div>
+        <div class="btnrow">
+            <div class="bigbtn"><p>Beküld</p></div>
+            <div class="normalbtn"><p>Í</p></div>
+            <div class="normalbtn"><p>Y</p></div>
+            <div class="normalbtn"><p>X</p></div>
+            <div class="normalbtn"><p>C</p></div>
+            <div class="normalbtn"><p>V</p></div>
+            <div class="normalbtn"><p>B</p></div>
+            <div class="normalbtn"><p>N</p></div>
+            <div class="normalbtn"><p>M</p></div>
+            <div class="bigbtn"><p>Töröl</p></div>
+        </div>
+    </div>
+</div>
+<div class="bgcontainer nodisplay">
+    <div class="popcont">
+        <svg onclick="fadee('250')" class ="ix" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true" class="h-6 w-6 cursor-pointer dark:stroke-white"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+        <div class="contcont">
+            <div class="cim">Belépés</div>
+            <div class="content"></div>
+        </div>
+    </div>
+</div>
+</body>
+<script src="script.js"></script>
+</html>
