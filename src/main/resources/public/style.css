@@ -1,0 +1,323 @@
+html{
+    background-color: #0f172a;
+    color: #f3f4f6;
+    font-family: ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+}
+body {
+    margin:0px;
+}
+.letter {
+    text-transform: uppercase;
+    font-weight:700;
+}
+.user {
+    fill:white;
+    padding:2px;
+}
+.contcont {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: flex-start;
+    margin-top:5px;
+
+}
+.cim {
+    display:flex;
+    justify-content: center;
+    font-weight: 500;
+    font-size: 1.125rem;
+}
+.guesses2{
+    tab-size: 4;
+    line-height: inherit;
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    gap: .25rem;
+    height: 64px!important;
+    max-height: 64px;
+    width: 100%!important;
+    max-width: 350px;
+}
+.popcont {
+    position: absolute;
+    position: absolute;
+    display: flex;
+    min-height: 200px;
+    height: max-content;
+    width: 336px;
+    background: #1f2936;
+    border-radius: 0.5rem;
+    padding:24px;
+    transition: 400ms;
+    transform: scale(0.95);
+}
+.grow {
+    transform: scale(1.0);
+}
+.ix {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    cursor: pointer;
+}
+.bgcontainer {
+    width:100vw;
+    height: 100vh;
+    position:fixed;
+    top:0px;
+    left: 0px;
+    background: #6b7280bf;
+    opacity: 0;
+    transition: 200ms;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+.nodisplay {
+    display: none;
+}
+.bgcontaineractive {
+opacity:1;
+
+}
+.icon{
+    tab-size: 4;
+    line-height: inherit;
+    fill: white;
+    border: 0 solid #e5e7eb;
+    box-sizing: border-box;
+    display: block;
+    vertical-align: middle;
+    margin-right: .5rem;
+    height: 1.5rem;
+    width: 1.5rem;
+    cursor: pointer;
+    stroke: #fff;
+}
+
+.menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 28px;
+    margin-bottom: 0.5rem!important;
+    width: 20rem;
+    max-width:100%;
+    font-weight:700;
+    font-size:1.1rem
+}
+
+.title{
+    float: left;
+}
+.icons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: auto;
+    float: right;
+}
+
+.letterbox{
+
+    background-color: transparent;
+    border: 0 solid #e5e7eb;
+    box-sizing: border-box;
+    margin-left: .125rem;
+    margin-right: .125rem;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    display: flex;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+
+}
+
+.guessescenter{
+    margin-bottom: .5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.letterboxgreen{
+    background-color: #22c55e;
+    tab-size: 4;
+    line-height: inherit;
+    box-sizing: border-box;
+    position: relative;
+    display: inline-flex;
+    flex-grow: 1;
+    text-shadow: 1px 1px 1px #000;
+    justify-content: center;
+    border-radius: .25rem;
+    color: rgb(255 255 255);
+}
+.flip {
+    transform: rotateX(90deg);
+}
+.letterboxyellow{
+    background-color: #eab308;
+    tab-size: 4;
+    line-height: inherit;
+    box-sizing: border-box;
+    position: relative;
+    display: inline-flex;
+    flex-grow: 1;
+    text-shadow: 1px 1px 1px #000;
+    justify-content: center;
+    border-radius: .25rem;
+    color: rgb(255 255 255);
+}
+.whiteborder {
+    border-color: white!important;
+}
+.contentp {
+    font-size: .875rem;
+    line-height: 1.25rem;
+    color: #d1d5db;
+    display:flex;
+    text-align: center;
+}
+.boom {
+    transform: scale(1.1);
+}
+.letterboxgrey{
+    background-color: #334155;
+    tab-size: 4;
+    line-height: inherit;
+    box-sizing: border-box;
+    position: relative;
+    display: inline-flex;
+    text-shadow: 1px 1px 1px #000;
+    flex-grow: 1;
+    justify-content: center;
+    border-radius: .25rem;
+    color: rgb(255 255 255);
+}
+
+.row{
+    tab-size: 4;
+    line-height: inherit;
+    border: 0 solid #e5e7eb;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: repeat(5,minmax(0,1fr));
+    gap: .25rem;
+}
+
+.letterboxcontainer{
+    tab-size: 4;
+    line-height: inherit;
+    border: 0 solid #e5e7eb;
+    box-sizing: border-box;
+    position: relative;
+    display: inline-flex;
+    flex-grow: 1;
+    justify-content: center;
+    border-radius: .25rem;
+    border-width: 2px;
+    border-style: solid;
+    border-color: rgb(71 85 105);
+    color: rgb(255 255 255);
+    animation-delay: 0ms;
+    transition: 300ms;
+}
+
+.guesses{
+    tab-size: 4;
+    line-height: inherit;
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    gap: .25rem;
+    height: calc(100vh - 280px)!important;
+    max-height: 560px;
+    width: calc((100vh - 280px) * 0.6034)!important;
+    max-width: 350px;
+}
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container {
+    display: flex;
+    padding: 0.5rem 3px 0.5rem 3px;
+    max-width: 436px;
+    width:calc(100vw - 6px);
+    height:calc(100vh - 1rem);
+    margin-left:auto;
+    margin-right:auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.btnbox {
+    display: flex;
+    flex-direction: column;
+    max-width:100%;
+    height:max-content;
+    user-select: none;
+}
+.btnrow {
+    display: flex;
+    flex-direction: row;
+    margin: 2px 0;
+    justify-content: space-between;
+}
+.centerr {
+    display:block;
+}
+.normalbtn {
+    display:flex;
+    flex-direction: column;
+    width:33.67px;
+    height:50px;
+    font-weight:700;
+    justify-content: center;
+    text-align:center;
+    background: #475569;
+    margin: 0 2px;
+    font-size: .75rem;
+    border-radius: 0.25rem;
+    cursor: pointer;
+}
+.bigbtn {
+    display:flex;
+    flex-direction: column;
+    width:59.77px;
+    height:50px;
+    font-weight:700;
+    justify-content: center;
+    text-align:center;
+    background: #475569;
+    margin: 0 2px;
+    font-size: .75rem;
+    border-radius: 0.25rem;
+    cursor: pointer;
+}
+.greenbtn {
+    background: #2dc465;
+}
+.greybtn {
+    background: #1e293a;
+}
+
+@media screen and (max-width: 992px) {
+    
+  }
