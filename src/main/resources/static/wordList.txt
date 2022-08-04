@@ -217,8 +217,8 @@ aroma
 arzén
 áskál
 áspis
-asszír
-asszony
+aszszír
+aszszony
 ásvány
 aszaló
 aszalt
@@ -471,7 +471,7 @@ becsér
 becses
 becsíp
 becslő
-becsszó
+becszszó
 becsuk
 becsül
 becsűr
@@ -726,7 +726,7 @@ borscs
 borsó
 borul
 borús
-bosszú
+boszszú
 botol
 botor
 botos
@@ -1192,7 +1192,7 @@ dilis
 dinár
 diner
 dingó
-dinnye
+dinynye
 dióda
 diófa
 dipól
@@ -1254,7 +1254,7 @@ drága
 dráma
 drapp
 drazsé
-dressz
+dreszsz
 drill
 drukk
 drusza
@@ -1655,7 +1655,7 @@ facsar
 facér
 fadúc
 faeke
-faggyú
+fagygyú
 fagyal
 fagyos
 fagyás
@@ -1701,7 +1701,7 @@ faszesz
 faszol
 faszén
 fater
-fattyú
+fatytyú
 fault
 fauna
 faváz
@@ -1874,7 +1874,7 @@ frank
 friss
 front
 fránya
-fröccs
+fröcscs
 fugáz
 fukar
 furat
@@ -2303,7 +2303,7 @@ hatos
 hátra
 hátsó
 hátul
-hattyú
+hatytyú
 hausza
 havas
 havaz
@@ -2381,7 +2381,7 @@ hindi
 hindu
 hinta
 hintó
-hinnye
+hinynye
 hippi
 híres
 hiszem
@@ -2429,7 +2429,7 @@ horpa
 horzsa
 hószám
 hószín
-hosszú
+hoszszú
 hotel
 hozam
 hozás
@@ -2781,7 +2781,7 @@ kasos
 kaszál
 kaszás
 kaszni
-kassza
+kaszsza
 katat
 katód
 kavar
@@ -3081,7 +3081,7 @@ kiírt
 kiölt
 kiönt
 kiütő
-klassz
+klaszsz
 klikk
 klíma
 klipsz
@@ -3195,7 +3195,7 @@ költő
 kölyök
 kömény
 könyék
-könnyű
+könynyű
 könyök
 köpeny
 köpés
@@ -3371,7 +3371,7 @@ lárma
 lárva
 laska
 lassú
-lasszó
+laszszó
 laszti
 látás
 látcső
@@ -3775,7 +3775,7 @@ mászat
 maszek
 mászik
 maszka
-massza
+maszsza
 matat
 matek
 mátka
@@ -3844,8 +3844,8 @@ menti
 mentő
 menza
 menyét
-mennye
-mennyi
+menynye
+menynyi
 mérce
 mered
 méreg
@@ -3866,8 +3866,8 @@ meszez
 mészkő
 mészmű
 mészsó
-messze
-messzi
+meszsze
+meszszi
 metán
 metél
 métely
@@ -4330,9 +4330,9 @@ ottan
 örvény
 örvös
 ösvény
-összár
-összeg
-összes
+öszszár
+öszszeg
+öszszes
 ösztön
 öszvér
 ötágú
@@ -4366,8 +4366,8 @@ ottan
 ősköd
 őslény
 ősnép
-ősszel
-ősszáj
+őszszel
+őszszáj
 őszapó
 őszelő
 őszies
@@ -4448,7 +4448,7 @@ parti
 pasas
 pászka
 pászma
-passzé
+paszszé
 paszta
 pászta
 paszuly
@@ -4625,7 +4625,7 @@ pötyög
 pötyög
 préda
 préri
-priccs
+pricscs
 príma
 prior
 priusz
@@ -5027,7 +5027,7 @@ sasfa
 sáska
 sásos
 saszla
-sasszé
+saszszé
 sátán
 satnya
 sátor
@@ -5111,10 +5111,10 @@ slejm
 slepp
 slicc
 slukk
-slussz
+sluszsz
 smink
 snapsz
-snassz
+snaszsz
 snitt
 sódar
 sóder
@@ -5188,7 +5188,7 @@ surmó
 súrol
 suska
 susog
-suttyó
+sutytyó
 suvad
 sügér
 süket
@@ -5412,8 +5412,8 @@ szitál
 szitás
 szítás
 szitok
-szittya
-szittyó
+szitytya
+szitytyó
 szivacs
 szivar
 szívás
@@ -5422,7 +5422,7 @@ szível
 szíves
 szívós
 szívügy
-szkeccs
+szkecscs
 szkiff
 szkíta
 szleng
@@ -5771,7 +5771,7 @@ tövis
 tőzeg
 tőzsde
 tőzsér
-traccs
+tracscs
 trade
 trafó
 trágya
@@ -5785,7 +5785,7 @@ triász
 trikó
 troli
 tromf
-trotty
+trotyty
 tröszt
 trucc
 trupp
@@ -6081,7 +6081,7 @@ vészel
 veszély
 vészes
 veszít
-vessző
+veszsző
 veszte
 vétek
 vetél
@@ -6263,7 +6263,7 @@ zsíroz
 zsírzó
 Zsóka
 Zsolt
-zsöllye
+zsölylye
 zsömle
 zsúfol
 zsugor
@@ -6284,7 +6284,7 @@ Flóra
 Félix
 Fülöp
 Galax
-Gallya
+Galylya
 Genua
 Gyula
 György
@@ -6381,7 +6381,7 @@ alpok
 amibe
 anker
 annak
-annyit
+anynyit
 anyagé
 apadó
 aplit
@@ -6533,7 +6533,7 @@ domén
 dozen
 dudák
 dugás
-dzsessz
+dzseszsz
 dzsigg
 dzsinn
 dácia
@@ -6577,7 +6577,7 @@ ettől
 fabél
 facsap
 fafej
-faggyó
+fagygyó
 fagát
 fagöb
 fajok
@@ -6653,7 +6653,7 @@ golyók
 gombó
 graff
 gross
-grossz
+groszsz
 guano
 guard
 gurka
@@ -6749,7 +6749,7 @@ jakab
 janka
 japcsi
 jelek
-jesszé
+jeszszé
 jogok
 jogot
 jolle
@@ -6893,7 +6893,7 @@ malát
 mancsú
 manók
 marks
-masszé
+maszszé
 mazut
 melyet
 menjo
@@ -7025,12 +7025,12 @@ rahat
 rahát
 rajna
 rajon
-rallye
+ralylye
 ramus
 rapir
 right
 rigyet
-rittyó
+ritytyó
 rodeo
 romló
 romok
@@ -7104,7 +7104,7 @@ szalve
 szapoly
 szarik
 szarul
-szattyú
+szatytyú
 szavak
 szcéna
 szedán
@@ -7280,7 +7280,7 @@ venus
 vesztő
 vevők
 vinil
-vissza
+viszsza
 viszki
 vivát
 vivés
@@ -7350,7 +7350,7 @@ zúzmó
 zúzás
 zűrös
 ábrák
-ácsszeg
+ácszszeg
 ágaké
 ágyban
 ágyfák
@@ -7388,7 +7388,7 @@ zűrös
 érdús
 értem
 érzem
-ésszel
+észszel
 íjhúr
 ínpók
 ínyére
@@ -7408,7 +7408,7 @@ zűrös
 önnek
 öníró
 önöké
-összet
+öszszet
 ötkor
 övsál
 övéik
@@ -8132,7 +8132,7 @@ Henna
 Henni
 Herta
 Heszna
-Hessza
+Heszsza
 Hetti
 Hilda
 Hilka
@@ -8309,7 +8309,7 @@ Nilla
 Nimfa
 Ninon
 Niobé
-Nissza
+Niszsza
 Noéla
 Noémi
 Nomin
@@ -8391,7 +8391,7 @@ Témisz
 Ténia
 Teréz
 Terka
-Tessza
+Teszsza
 Tétisz
 Tiana
 Tiána
@@ -8467,7 +8467,3 @@ Zsófi
 Zsóka
 Zsuzsa
 Zsuzsi
-
-
-** Process exited - Return Code: 0 **
-Press Enter to exit terminal
