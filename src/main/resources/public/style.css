@@ -17,9 +17,9 @@ body {
 .contcont {
     display: flex;
     flex-direction: column;
-    width: 100%;
-    justify-content: flex-start;
-    margin-top:5px;
+    width: calc(100%);
+    justify-content: start;
+    margin-top: 5px;
 
 }
 .cim {
@@ -36,26 +36,28 @@ body {
     margin-right: auto;
     display: grid;
     gap: .25rem;
-    height: 64px!important;
+    height: 64px;
     max-height: 64px;
     width: 100%!important;
     max-width: 350px;
 }
 .popcont {
-    position: absolute;
+
     position: absolute;
     display: flex;
+    top: min(55%,calc(50vh) + 10px);
     min-height: 200px;
     height: max-content;
-    width: 336px;
+    max-width: 336px;
+    width: calc(90% - 48px);
     background: #1f2936;
     border-radius: 0.5rem;
-    padding:24px;
+    padding: 24px;
     transition: 400ms;
-    transform: scale(0.95);
+    transform: translateY(max(-40vh,-40%)) scale(0.95);
 }
 .grow {
-    transform: scale(1.0);
+    transform: translateY(max(-50vh,-50%)) scale(1.0);
 }
 .ix {
     width: 24px;
@@ -66,8 +68,8 @@ body {
     cursor: pointer;
 }
 .bgcontainer {
-    width:100vw;
-    height: 100vh;
+    width:100%;
+    height: 100%;
     position:fixed;
     top:0px;
     left: 0px;
@@ -78,6 +80,7 @@ body {
     align-content: center;
     justify-content: center;
     align-items: center;
+    overflow: auto;
 }
 .nodisplay {
     display: none;
@@ -197,11 +200,17 @@ opacity:1;
 }
 .contentdolt {
     font-style: italic;
-
+    font-size: .875rem;
+    line-height: 1.25rem;
+    color: #d1d5db;
+    text-align: center;
+    width: 100%;
+    justify-content: center;
 }
 .link {
-    color:white;
-    font-weight: 500;
+    color:inherit;
+    font-weight: 700;
+
 }
 .boom {
     transform: scale(1.1);
@@ -246,6 +255,7 @@ opacity:1;
     color: rgb(255 255 255);
     animation-delay: 0ms;
     transition: 300ms;
+    background: #0f172a;
 }
 
 .guesses{

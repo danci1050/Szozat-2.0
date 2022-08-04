@@ -1,3 +1,31 @@
+wait = false
+function resizee(){
+    if(!wait) {
+        let row = document.querySelector(".guesses2");
+        if(document.querySelector(".popcont").classList.contains("grow")) {
+        let origwidth = row.offsetWidth;
+        let maxwidth = 336;
+        let maxheight = 64;
+        let ratio = maxheight / maxwidth
+        let origheight = row.offsetHeight;
+        if(origwidth < maxwidth) {
+        let rows = document.querySelectorAll('.guesses2')
+        for(let i = 0; i < rows.length;i++) { 
+        rows[i].style.height = (origwidth * ratio)+"px"
+        }
+    }
+        
+        wait = true;
+        setTimeout(function(){wait = false},100)
+        }}
+}
+// ----------------
+// window resize
+// ----------------
+
+window.addEventListener('resize', resizee);
+
+
 function fadee(time) {
     let BGCONT = document.querySelector(".bgcontainer")
     if(BGCONT.classList.contains("nodisplay")) {
@@ -6,8 +34,10 @@ function fadee(time) {
         setTimeout(function() {
             BGCONT.classList.add("bgcontaineractive")
             document.querySelector(".popcont").classList.add("grow")
+            resizee()
         },50)
         setTimeout(function() {BGCONT.style.transition = "0ms"},time)
+        
     }
     else {
         BGCONT.style.transition = time+"ms"
@@ -67,7 +97,12 @@ function betolt(mit) {
         </div>
         </div>
         <p class="contentp">Az "Á" betű nem szerepel a szóban.</p>
+        <p class="contentdolt">Ez egy nyílt forráskódú, továbbfejlesztett magyar változata a Wordle játéknak.</p>
         <p class="contentdolt">A módosítatlan szólistánkat <a target="_blank" class="link" href="https://gist.github.com/Konstantinusz/f9517357e46fa827c3736031ac8d01c7">innen</a> érheted el.</p>
+        <p class="contentdolt">Nézd meg <a target="_blank" class="link" href="https://github.com/danci1050/Szozat-2.0">a továbbfejlesztett magyar verzió kódját itt.</a></p>
+        <p class="contentdolt">Az angol verzió klónjának <a target="_blank" class="link" href="https://github.com/cwackerfuss/react-wordle">a kódját itt találod.</a></p>
+        <p class="contentdolt">Az eredeti játékot pedig <a target="_blank" class="link" href="https://github.com/cwackerfuss/react-wordle">itt kipróbálhatod.</a></p>
+        <p class="contentdolt">A továbbfejlesztett magyar vezió agyát <strong>Nagy Dániel</strong>, a kinézetét pedig <strong>Ákim László</strong> valósította meg.</p>
         `;
             break;
         case "settings":
@@ -81,6 +116,7 @@ function betolt(mit) {
             break;
     }
 }
+
 function flipto(which, colour) {
     let speed = 175;
     let allbox = document.querySelectorAll(".letterbox")
@@ -107,6 +143,8 @@ var diff = now - start;
 var oneDay = 1000 * 60 * 60 * 24;
 var day = Math.floor(diff / oneDay);
 document.querySelector("#menutitle").innerHTML = "Hundle - "+day+". nap"
+
+
 // ----------------
 // window onload
 // ----------------
