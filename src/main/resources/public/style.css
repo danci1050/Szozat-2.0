@@ -195,6 +195,14 @@ opacity:1;
     margin-top:0px;
     margin-bottom:25px;
 }
+.contentdolt {
+    font-style: italic;
+
+}
+.link {
+    color:white;
+    font-weight: 500;
+}
 .boom {
     transform: scale(1.1);
 }

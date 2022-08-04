@@ -52,7 +52,7 @@ function betolt(mit) {
             <div class="letterboxyellow"><div class="letterbox"><div class="letter">A</div></div></div>
             <div class="letterboxcontainer whiteborder"><div class="letterbox"><div class="letter">T</div></div></div>
             </div> 
-        </div>
+        </div> 
         </div>
         <p class="contentp">Az "A" betű szerepel a szóban, de nem jó helyen van.</p>
         <div class="guessescenter">
@@ -67,6 +67,7 @@ function betolt(mit) {
         </div>
         </div>
         <p class="contentp">Az "Á" betű nem szerepel a szóban.</p>
+        <p class="contentdolt">A módosítatlan szólistánkat <a target="_blank" class="link" href="https://gist.github.com/Konstantinusz/f9517357e46fa827c3736031ac8d01c7">innen</a> érheted el.</p>
         `;
             break;
         case "settings":
