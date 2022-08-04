@@ -161,11 +161,16 @@ async function szinez(sz1,sz2,sz3,sz4,sz5) {
     function checkwin(a1,a2,a3,a4,a5) {
         if (a1 == "correct" && a2 == "correct" && a3 == "correct" && a4 == "correct" && a5 == "correct") {
             console.log("Nyertél geci")
+            let valoswin = true 
+            if(valoswin) {
+                forgas = true
+            }
+            //szerver oldalon le kell csekkolni, hogy valóban nyert-e valaki, majd ha igen, akkor letiltani az inputokat.
         }
     }
 
     async function doo(mit) {
-        if (mit == "do") {
+        if (mit == "do" && !forgas) {
             if(document.querySelectorAll(".letter")[(hanyadiksor * 5) - 1] != null && !forgas){
             var response = await checkWord(getszo().toLowerCase())
             szinez(response[0],response[1],response[2],response[3],response[4])
@@ -174,7 +179,7 @@ async function szinez(sz1,sz2,sz3,sz4,sz5) {
         else {
             let kockak = document.querySelectorAll(".letterbox")
             let hanyadik = (hanyadiksor - 1) * 5 + hanyadikbetu - 1;
-            if (hanyadikbetu > 1) { kockak[hanyadik - 1].innerHTML = ''; kockak[hanyadik - 1].parentNode.classList.remove("whiteborder"); hanyadikbetu-- }
+            if (hanyadikbetu > 1 && !forgas) { kockak[hanyadik - 1].innerHTML = ''; kockak[hanyadik - 1].parentNode.classList.remove("whiteborder"); hanyadikbetu-- }
         }
     }
     
@@ -184,7 +189,7 @@ async function szinez(sz1,sz2,sz3,sz4,sz5) {
         let speed = 100
         let kockak = document.querySelectorAll(".letterbox")
         let hanyadik = (hanyadiksor - 1) * 5 + hanyadikbetu - 1;
-        if (hanyadikbetu <= 6) {
+        if (hanyadikbetu <= 6 && !forgas) {
             let elozo = kockak[hanyadik - 1] != null ? kockak[hanyadik - 1].firstChild.innerHTML.toUpperCase() : 0
             let elozoelozo = kockak[hanyadik - 2] != null ? kockak[hanyadik - 2].firstChild.innerHTML.toUpperCase() : 0
             let duplak = ["S", "Z", "L", "N", "T", "D", "DZ", "C", "G"]
